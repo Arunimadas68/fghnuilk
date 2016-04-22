@@ -58,7 +58,7 @@
 			var receiveMessage = function receiveMessage(e){
 				switch (e.data) {
 					case 'setBlanker':
-						document.getElementById('blanker').style.display = 'none';
+						document.getElementById('blanker').style.display = 'block';
 						break;
 				}
 			};			
@@ -66,10 +66,11 @@
 			
 			function onDeviceReady()     
 			{
+				document.getElementById('blanker').style.display = 'none';
 				//alert('hi');
 				var push = PushNotification.init({ "android": {"senderID": "548775200419"},
 				"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
-
+				
 				push.on('registration', function(data) {
 				console.log(data.registrationId);
 				document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devType=2&devId='+data.registrationId;
