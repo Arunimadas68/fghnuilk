@@ -57,10 +57,10 @@
 			}
 			var receiveMessage = function receiveMessage(e){
 				switch (e.data) {
-						case :'setBlanker':
+						case 'setBlanker':
 						document.getElementById('blanker').style.display = 'block';
 						break;
-						case :'removeBlanker':
+						case 'removeBlanker':
 						document.getElementById('blanker').style.display = 'none';
 						break;
 					}
@@ -69,7 +69,7 @@
 			  
 			function onDeviceReady()     
 			{  
-				document.getElementById('blanker').style.display = 'block';
+				//document.getElementById('blanker').style.display = 'block';
 				//alert('hi');
 				var push = PushNotification.init({ "android": {"senderID": "548775200419"},
 				"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
