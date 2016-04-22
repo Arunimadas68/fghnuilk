@@ -29,8 +29,8 @@
       <script type="text/javascript">
 		document.addEventListener("deviceready",onDeviceReady,false);
 		function onDeviceReady(){
-		    alert('ready');
-			console.log("Device Ready")
+		    alert('readyhj');
+			alert("Device Readyui")
 			var push = PushNotification.init({ "android": {"senderID": "718397155156"},
 			"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
 
@@ -38,9 +38,9 @@
 			alert(data.registrationId);
 			$("#gcm_id").html(data.registrationId);
 			});
-
+			alert("hhhj");
 			push.on('notification', function(data) {
-			console.log(data.message);
+			alert(data.message);
 			alert(data.title+" Message: " +data.message);
 			// data.title,
 			// data.count,
@@ -50,7 +50,7 @@
 			});
 
 			push.on('error', function(e) {
-			console.log(e.message);
+			alert(e.message);
 			});
 		}
 		</script>
@@ -92,9 +92,9 @@
 				alert(data.registrationId);
 				$("#gcm_id").html(data.registrationId);
 				});
-
+				alert("hh");
 				push.on('notification', function(data) {
-				console.log(data.message);
+				alert(data.message);
 				alert(data.title+" Message: " +data.message);
 				// data.title,
 				// data.count,
