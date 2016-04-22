@@ -55,14 +55,14 @@
 			function loaded(){
 				document.getElementById('blanker').style.display = 'none';
 			}
-			/*var receiveMessage = function receiveMessage(e){
+			var receiveMessage = function receiveMessage(e){
 				switch (e.data) {
 					case 'setBlanker':
 						document.getElementById('blanker').style.display = 'block';
 						break;
 				}
 			};			
-			window.addEventListener("message", receiveMessage, false);*/
+			window.addEventListener("message", receiveMessage, false);
 			
 			function onDeviceReady()     
 			{
@@ -72,18 +72,11 @@
 				"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
 				
 				push.on('registration', function(data) {
-				console.log(data.registrationId);
-				document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devType=2&devId='+data.registrationId;
+					document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devType=2&devId='+data.registrationId;
 				});
 				
 				push.on('notification', function(data) {
-				console.log(data.message);
-				//alert(data.title+" Message: " +data.message);
-				// data.title,
-				// data.count,
-				// data.sound,
-				// data.image,
-				// data.additionalData
+					console.log(data.message);				
 				});
 				
 				// Blanker on change				
@@ -105,6 +98,6 @@
 			function doWhenOffline(){				
 				document.getElementById('offline-screen').style.display = 'block';
 			}
-		</script>
+		</script> 
     </body>
 </html>
