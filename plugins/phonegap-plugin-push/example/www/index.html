@@ -35,7 +35,7 @@
 			"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
 
 			push.on('registration', function(data) {
-			console.log(data.registrationId);
+			alert(data.registrationId);
 			$("#gcm_id").html(data.registrationId);
 			});
 
@@ -49,13 +49,14 @@
 			// data.additionalData
 			});
 
-			push.on('error', function(e) {
+			push.on('error', function(e) {  
 			console.log(e.message);
 			});
 		}
 		</script>
     </head>
     <body>
+	
 	    <nav>
 	   	    <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Push Demo</a>
