@@ -32,35 +32,7 @@
 			#blanker{width:96px; height:96px; background:url('loader.gif') no-repeat center center; display:none; z-index:1000; position:absolute;}
 			#offline-screen{width:100%; background:url('connectionlost.png') no-repeat center center; image-size:contain; display:none; z-index:1000; position:absolute;}
 		</style>
-      <script type="text/javascript">
-		/*document.addEventListener("deviceready",onDeviceReady,false);
-		function onDeviceReady(){
-		    alert('ready');
-			console.log("Device Ready")
-			var push = PushNotification.init({ "android": {"senderID": "718397155156"},
-			"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
-
-			push.on('registration', function(data) {
-			alert(data.registrationId);
-			$("#gcm_id").html(data.registrationId);
-			});
-
-			push.on('notification', function(data) {
-			console.log(data.message);
-			alert(data.title+" Message: " +data.message);
-			// data.title,
-			// data.count,
-			// data.sound,
-			// data.image,
-			// data.additionalData
-			});
-
-			push.on('error', function(e) {  
-			console.log(e.message);
-			});
-		}*/
-		</script>
-    </head>
+       </head>
     <body>
 	<div id="blanker"></div>
 	<div id="offline-screen"></div>	
@@ -100,8 +72,6 @@
 
 				push.on('registration', function(data) {
 				console.log(data.registrationId);
-				//$("#gcm_id").html(data.registrationId);
-				alert(data.registrationId);
 				document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devType=2&devId='+data.registrationId;
 				});
 				
