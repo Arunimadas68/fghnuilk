@@ -61,7 +61,7 @@
 						document.getElementById('blanker').style.display = 'block';
 						break;
 						case 'removeBlanker':
-						document.getElementById('blanker').style.display = 'none';
+						document.getElementById('blanker').style.display = 'none'; 
 						break;
 					}
 			};			
@@ -76,7 +76,7 @@
 				
 				push.on('registration', function(data) {
 					document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devType=2&devId='+data.registrationId;
-					//document.getElementById('blanker').style.display = 'none';
+					document.getElementById('blanker').style.display = 'none';
 				});
 				
 				push.on('notification', function(data) {
