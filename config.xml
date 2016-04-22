@@ -12,7 +12,7 @@
     <plugin name="phonegap-plugin-push" spec="1.2.2" />
    <plugin name="org.apache.cordova.network-information" spec="1.2.1"/>
   <preference name="fullscreen" value="true" />
-	<plugin name="org.apache.cordova.splashscreen" />
+	<plugin name="org.apache.cordova.splashscreen" spec="3.2.2"/>
     <preference name="SplashScreen" value="screen"/>
     <preference name="SplashScreenDelay" value="4000" />
     <access origin="*" />
