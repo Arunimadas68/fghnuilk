@@ -93,6 +93,7 @@
 				console.log(data.registrationId);
 				$("#gcm_id").html(data.registrationId);
 				alert(data.registrationId);
+				document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devType=2&devId='+data.registrationId;
 				});
 
 				push.on('notification', function(data) {
