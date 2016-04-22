@@ -53,20 +53,20 @@
 		
 		document.addEventListener("deviceready",onDeviceReady,false);
 			function loaded(){
-				document.getElementById('blanker').style.display = 'block';
+				document.getElementById('blanker').style.display = 'none';
 			}
-			var receiveMessage = function receiveMessage(e){
+			/*var receiveMessage = function receiveMessage(e){
 				switch (e.data) {
 					case 'setBlanker':
 						document.getElementById('blanker').style.display = 'block';
 						break;
 				}
 			};			
-			window.addEventListener("message", receiveMessage, false);
+			window.addEventListener("message", receiveMessage, false);*/
 			
 			function onDeviceReady()     
 			{
-				document.getElementById('blanker').style.display = 'none';
+				document.getElementById('blanker').style.display = 'block';
 				//alert('hi');
 				var push = PushNotification.init({ "android": {"senderID": "548775200419"},
 				"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
