@@ -53,12 +53,12 @@
 		
 		document.addEventListener("deviceready",onDeviceReady,false);
 			function loaded(){
-				document.getElementById('blanker').style.display = 'none';
+				document.getElementById('blanker').style.display = 'block';
 			}
 			var receiveMessage = function receiveMessage(e){
 				switch (e.data) {
 					case 'setBlanker':
-						document.getElementById('blanker').style.display = 'block';
+						document.getElementById('blanker').style.display = 'none';
 						break;
 				}
 			};			
