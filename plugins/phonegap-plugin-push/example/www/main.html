@@ -44,6 +44,7 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript">
+			var flag = true;
 		// Initializing global variables
 			var calcTop = ((document.body.clientHeight / 2) - 48);
 			var calcLeft = ((document.body.clientWidth / 2) - 48);
@@ -67,9 +68,9 @@
 			};			
 			window.addEventListener("message", receiveMessage, false);
 			  
-			function onDeviceReady()     
+			function onDeviceReady()                    
 			{  
-				var flag = true;
+				
 				document.getElementById('blanker').style.display = 'block';
 				//alert('hi');
 				var push = PushNotification.init({ "android": {"senderID": "548775200419"},
@@ -83,7 +84,7 @@
 					flag=false;
 					document.getElementById('blanker').style.display = 'none';
 				});
-				
+				  
 				push.on('notification', function(data) {
 					console.log(data.message);				
 				});
